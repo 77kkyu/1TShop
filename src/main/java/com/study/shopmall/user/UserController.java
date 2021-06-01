@@ -1,4 +1,4 @@
-package com.study.shopmall.member;
+package com.study.shopmall.user;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-public class MemberController {
-	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
+public class UserController {
+	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
 	@RequestMapping(value="/join")
 	public String loginGet() {
-		logger.info("íšŒì›ê°€ì… í˜ì´ì§€ ì§„ì…");
+		logger.info("?šŒ?›ê°??… ?˜?´ì§? ì§„ì…");
 		return "";
 	}
 	
 	@RequestMapping(value="/login")
 	public String joinGet() {
-		logger.info("ë¡œê·¸ì¸ í˜ì´ì§€ ì§„ì…");
+		logger.info("ë¡œê·¸?¸ ?˜?´ì§? ì§„ì…");
 		return "";
 	}
 	

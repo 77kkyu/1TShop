@@ -20,10 +20,10 @@ public class MysqlTest {
 		Class.forName(DRIVER);
 		
 		try(Connection con = DriverManager.getConnection(URL, USER, PW)) {
-			System.out.println("靹标车");
+			System.out.println("角青凳");
 			System.out.println(con);
 		} catch(Exception e) {
-			System.out.println("鞐愲煬氚滌儩");
+			System.out.println("角青救凳");
 			e.printStackTrace();
 		}
 		
