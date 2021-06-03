@@ -6,5 +6,7 @@ import com.study.shopmall.items.vo.ItemVO;
 
 public interface ItemService {
 	
-	public List<ItemVO> listItem();
+	public List<ItemVO> mainListItem() throws Exception;
+	
+	public List<ItemVO> cateList() throws Exception;
 }

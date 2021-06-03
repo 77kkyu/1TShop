@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,12 +23,13 @@ img {
 }
 </style>
 <body>
+<body>
     <div class="content-page">
         <div class="content">
 	
             <!-- Start Content--> <!-- 1, 5, 10 마다 " style="margin-left: 105px;" -->
             <div class="container-fluid">
-                <h3 style="margin-left: 575px;">WEEKLY BEST</h3>
+                <h3 style="margin-left: 575px;">BEST10</h3>
 	                <div class="row">
                 		<c:forEach var="items" items="${list}">
 		                    <div class="col-sm-2">

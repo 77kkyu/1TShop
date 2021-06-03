@@ -36,8 +36,7 @@
         <a class="nav-link" href="#" style="color: black;">게시판</a>
       </li>
     </ul>
-
-    <form class="form-inline my-2 my-md-0" >
+    <form class="form-inline my-2 my-md-0">
       <i class="fa fa-search" aria-hidden="true" style="color: black; margin-left: 500px;"></i>
       <input class="form-control" type="text" placeholder="Search" style="font-size: 12px;">
     </form>
@@ -45,12 +44,12 @@
 </nav> <br><br><br>
 
 <div>
-	<h1 align="center" style="font: bold; font-size: 45px; margin-left: -30px;">Shop</h1><br><br><hr> 
+	<h1 align="center" style="font: bold; font-size: 45px; margin-left: -30px;"><a href="/main" style="color:black; text-decoration: none ;">Shop</a></h1><br><br><hr> 
 	<div class="container">
-		 <div class="row">
-        <div >
-          <ul >
-            <li style="display: inline-block; margin-left: 100px; margin-right: 130px; "><a href="#" style="color: black;">Best10</a></li>
+		<div class="row">
+        <div>
+          <ul>
+            <li style="display: inline-block; margin-left: 100px; margin-right: 130px; "><a href="/list/cateList" style="color: black;">Best10</a></li>
             <li style="display: inline-block; margin-right: 130px;"><a href="#" style="color: black;">apple watch</a></li>
             <li style="display: inline-block; margin-right: 130px;"><a href="#" style="color: black;">iphone case</a></li>
             <li style="display: inline-block; margin-right: 130px;"><a href="#" style="color: black;">airpods case</a></li>

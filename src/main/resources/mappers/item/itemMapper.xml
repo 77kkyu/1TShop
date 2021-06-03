@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.study.mappers.itemMapper">
-	<!-- 상품리스트 -->
-	<select id="mainListItem" resultType="com.study.shopmall.items.vo.ItemVO">
+<mapper namespace="com.study.shopmall.itemMapper">
+	<!-- 상품리스트 -->					
+	<select id="mainListItem" resultType="itemVO">
 		SELECT 
 			item_no, 
 			item_image,
@@ -12,8 +12,21 @@
 			item_price
 		FROM
 			items
-		ORDER BY item_name
+		ORDER BY item_name DESC
 	</select>
+	
+	<!-- 상품리스트 -->					
+	<select id="cateList" resultType="itemVO">
+		SELECT 
+			item_no, 
+			item_image,
+			item_name,
+			item_price
+		FROM
+			items
+		ORDER BY item_name DESC
+	</select>
+	
 	
 </mapper>
   

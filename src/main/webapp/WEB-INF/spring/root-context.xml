@@ -14,23 +14,23 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- MySQL DataSource -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
-        <property name="url" value="jdbc:log4jdbc:mysql://127.0.0.1:3306/shoppingmall?useSSL=false&amp;serverTimezone=UTC"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="class304"></property>
-    </bean>      
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/shoppingmall?characterEncoding=UTF-8&amp;serverTimezone=UTC" />
+		<property name="username" value="root" />
+		<property name="password" value="class304" />
+	</bean> 
 
-	 <!-- mybatis SqlSessionFactoryBean -->
-	 <!-- SqlSessionFactory는 DB와의 연괄고 SQL의 실행에 대한 모든 것을 가진 객체 -->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="configLocation" value="classpath:/mybatis-config.xml"></property>
-      	<property name="mapperLocations" value="classpath:/mappers/**/*Mapper.xml"></property>
-        
-    </bean>
+	 <!-- sqlSessionFactory --> 
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:/mybatis-config.xml" />
+		<property name="mapperLocations" value="classpath:/mappers/**/*Mapper.xml"/>
+	</bean>
     
-    <!-- Sqlsession 객체 주입 -->
-    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
-    	<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
-    </bean>	
+    <!-- SqlSessionTemplate -->
+	<bean id="sqlSessoinTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	
+	<context:component-scan base-package="com.study.shopmall"/>
 </beans>
