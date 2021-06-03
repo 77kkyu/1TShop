@@ -17,9 +17,15 @@ public class ItemServiceImpl implements ItemService {
 
 	//메인 상품 목록
 	@Override
-	public List<ItemVO> listItem() {
+	public List<ItemVO> mainListItem() throws Exception{
 	
-		return itemDAO.listItem();
+		return itemDAO.mainListItem();
+	}
+
+	@Override
+	public List<ItemVO> cateList() throws Exception {
+		
+		return itemDAO.cateList();
 	}
 	
 	

@@ -13,9 +13,17 @@
     
     <definition name="main" extends="base">
         <put-attribute name="content" value="/WEB-INF/views/main.jsp" />
-    </definition>
+    </definition> 
     
-    <definition name="/*/*" extends="base">
+    <!-- <definition name="main/list" extends="base">
+        <put-attribute name="content" value="/WEB-INF/views/list/cateList.jsp" />
+    </definition>  -->
+    
+    <definition name="*" extends="base">
+        <put-attribute name="content" value="/WEB-INF/views/{1}.jsp" />
+    </definition>
+        
+    <definition name="*/*" extends="base">
         <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
     </definition>
     
