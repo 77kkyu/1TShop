@@ -11,9 +11,9 @@ public interface ItemService {
 	
 	public List<ItemVO> cateList() throws Exception;
 	
-	//惑前 醚 肮荐
-	public int countItem();
-
-	//其捞隆 贸府 惑前 炼雀
-	public List<ItemVO> selectItem(PagingVO	pagingVO);
+//	//惑前 醚 肮荐
+//	public int countItem();
+//
+//	//其捞隆 贸府 惑前 炼雀
+//	public List<ItemVO> selectItem(PagingVO	pagingVO);
 }
