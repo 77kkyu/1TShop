@@ -19,7 +19,7 @@ import com.study.shopmall.general.utils.PagingVO;
 public class MainController {
 
 	@Autowired
-	private ItemService itemService;
+	private ItemService itemServiceImpl;
 
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 
@@ -27,15 +27,13 @@ public class MainController {
 	public String mainListItem(Model model) throws Exception {
 		logger.info("main 실행중.............");
 		List<ItemVO> list;
-		list = itemService.mainListItem();
+		list = itemServiceImpl.mainListItem();
 		model.addAttribute("list", list);
 		return "main";
 	}
 
 	@RequestMapping(value = "/list/cateList", method = RequestMethod.GET) 
-	public String cateList(Model model, PagingVO pagingVO 
-				, @RequestParam(value="nowPage", required=false)String nowPage
-				, @RequestParam(value="cntPerPage", required=false)String cntPerPage) throws Exception {
+	public String cateList(Model model) throws Exception {
 		
 		logger.info("list 실행중............."); 
 
@@ -52,7 +50,7 @@ public class MainController {
 //		model.addAttribute("paging", pagingVO);
 //		model.addAttribute("viewAll", itemService.selectItem(pagingVO));
 		List<ItemVO> list; 
-		list = itemService.mainListItem(); 
+		list = itemServiceImpl.mainListItem(); 
 		model.addAttribute("list", list); 
 		return "list/cateList"; 
 	}
