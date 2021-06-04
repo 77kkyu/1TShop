@@ -13,7 +13,7 @@ import com.study.shopmall.general.utils.PagingVO;
 public class ItemServiceImpl implements ItemService {
 
 	@Autowired
-	ItemMapper itemMapper;
+	private ItemMapper itemMapper;
 	
 	//메인 상품 목록
 	@Override
@@ -27,18 +27,18 @@ public class ItemServiceImpl implements ItemService {
 		return itemMapper.cateList();
 	}
 
-	//상품 총 갯수
-	@Override
-	public int countItem() {
-		return itemMapper.countItem();
-	}
-	
-	//페이징 처리 상품 조회
-	@Override
-	public List<ItemVO> selectItem(PagingVO pagingVO) {
-		return itemMapper.selectItem(pagingVO);
-	}
-	
+//	//상품 총 갯수
+//	@Override
+//	public int countItem() {
+//		return itemMapper.countItem();
+//	}
+//	
+//	//페이징 처리 상품 조회
+//	@Override
+//	public List<ItemVO> selectItem(PagingVO pagingVO) {
+//		return itemMapper.selectItem(pagingVO);
+//	}
+//	
 	
 	
 }

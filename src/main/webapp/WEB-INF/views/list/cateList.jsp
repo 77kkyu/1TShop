@@ -61,23 +61,22 @@ img {
 				<!-- 페이징 -->
                 <div class="row">
                     <div class="col-12">
-                        <ul class="pagination pagination-rounded justify-content-end mb-3">
-                            <li class="page-item">
-                                <a class="page-link" href="javascript: void(0);" aria-label="Previous">
-                                    <span aria-hidden="true">«</span>
-                                </a>
-                            </li>
-                            <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a></li>
-                            <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
-                            <li class="page-item"><a class="page-link" href="javascript: void(0);">3</a></li>
-                            <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
-                            <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="javascript: void(0);" aria-label="Next">
-                                    <span aria-hidden="true">»</span>
-                                </a>
-                            </li>
-                        </ul>
+                       <c:if test ="${paging.startPage != 1 }">
+                       		<a href="/list/cateList?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+                       </c:if>
+                       <c:forEach begin="${paging.startPage}" end="${paging.endPage }" var="p">
+                       		<c:choose>
+                       			<c:when test="${p == paging.nowPage }">
+                       				<b>${p }</b>
+                       			</c:when>
+                       			<c:when test="${p != paging.nowPage }">
+									<a href="/list/cateList?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+                       			</c:when>
+                       		</c:choose>
+                       </c:forEach>
+                       <c:if test="${paging.endPage != paging.lastPage }">
+                       		<a href="/list/cateList?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+                       </c:if>
                     </div> 
                 </div> 
                 <!-- end row-->
