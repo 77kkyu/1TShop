@@ -1,4 +1,4 @@
-package com.study.shopmall.items.vo;
+package com.study.shopmall.general.items.vo;
 
 import lombok.Getter;
 import lombok.Setter;

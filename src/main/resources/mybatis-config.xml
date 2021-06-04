@@ -9,7 +9,7 @@
 	</settings> -->
 	
 	<typeAliases>
-		<typeAlias type="com.study.shopmall.items.vo.ItemVO" alias="itemVO"/>
+		<typeAlias type="com.study.shopmall.general.items.vo.ItemVO" alias="itemVO"/>
 	</typeAliases>
 	
 </configuration>
