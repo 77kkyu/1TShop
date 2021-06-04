@@ -1,4 +1,4 @@
-package com.study.shopmall.user;
+package com.study.shopmall.general.user;
 
 import java.sql.Timestamp;
 

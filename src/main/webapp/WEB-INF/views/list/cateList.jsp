@@ -26,7 +26,6 @@ img {
 <body>
     <div class="content-page">
         <div class="content">
-	
             <!-- Start Content--> <!-- 1, 5, 10 마다 " style="margin-left: 105px;" -->
             <div class="container-fluid">
                 <h3 style="margin-left: 575px;">BEST10</h3>
@@ -58,8 +57,8 @@ img {
 		                    </div>
                 		</c:forEach>
 	                </div>
-                <!-- end row -->
-				<!-- 페이징 
+                
+				<!-- 페이징 -->
                 <div class="row">
                     <div class="col-12">
                         <ul class="pagination pagination-rounded justify-content-end mb-3">
@@ -79,8 +78,8 @@ img {
                                 </a>
                             </li>
                         </ul>
-                    </div> <!-- end col
-                </div> -->
+                    </div> 
+                </div> 
                 <!-- end row-->
                 
             </div> <!-- container -->
